@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>survey form</title>
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">
+    Thank you for taking your time to answer these questions
+  </p>
+
+  <form id="survey-form">
+    <fieldset>
+      <label id="name-label" for="name">Name: </label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter your name"
+        required
+        />
+
+      <label id= "email-label" for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="Enter your email"
+        required
+        />
+
+      <label id="number-label" for="number">Age:</label>
+      <input
+        id="number"
+        type="number"
+        placeholder="Enter your age"
+        min="13"
+        max="100"
+        />
+    </fieldset>
+    <fieldset form="survey-form">
+      <label id="role-label" for="dropdown">What's your  current role?
+        <select id="dropdown"> 
+        <option value= "0">Select your role</option>
+        <option value= "1">student</option>
+        <option value= "2">full-time worker</option>
+        <option value= "3">prefer not to say</option>
+        <option value= "4">other</option>
+        </select>  
+        </label>
+    </fieldset>
+
+    <fieldset form="survey-form">
+      <label>Will you recomend freeCodeCamp to friends?</label>
+      <label for="">
+          <input 
+          class="inline"
+          id="refer-yes" 
+          type="radio" 
+          name="refer"
+          value="yes" 
+          checked /> 
+          Yes
+          </label>
+
+          <label for="refer-maybe">
+          <input 
+          class="inline"
+          id="refer-maybe" 
+          type="radio" 
+          name="refer"
+          value="maybe" /> 
+          Maybe</label>
+
+      <label for="refer-no">
+          <input 
+          class="inline"
+          id="refer-no" 
+          type="radio" 
+          name="refer"
+          value="no" /> 
+          No</label>
+    </fieldset>
+
+    <fieldset form="survey-form">
+      <label for="bio">Any Suggestions or comments?</label>
+      <textarea
+      id="bio"
+      rows="6"
+      cols="30">
+      </textarea>
+    </fieldset>
+
+    <label for="newsletter">
+        <input 
+        class="inline"
+         id="newsletter" 
+         type="checkbox" 
+         name="newsletter" 
+         value="subscribed"
+         /> I'd like a subscription to freeCodeCamp newsletter
+      </label>
+
+    <label for="terms-and-conditions">
+        <input 
+        class="inline"
+        id="terms-and-conditions" 
+        type="checkbox" required
+        name="terms-and-conditions"
+        value="tncaccepted" 
+        /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+
+    <button 
+    form="survey-form"
+    type="submit" 
+    id="submit" >
+    Submit
+    </button>
+  </form>
+</body>
+
+</html>
